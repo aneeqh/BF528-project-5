@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#$ -P bf528
+#$ -cwd
+#$ -pe omp 16
+
+source /etc/bashrc
+
+module load subread/1.6.2
+
+GTF=/project/bf528/project_3/reference/rn4_refGene_20180308.gtf
+OUT=/projectnb/bf528/students/aneeqh/final_project/FCresults/$1.txt
+featureCounts -T 16 -a $GTF -o $OUT /projectnb/bf528/users/tinman_2022/project_3/star_results/$2
+
