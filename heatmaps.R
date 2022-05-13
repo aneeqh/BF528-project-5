@@ -4,7 +4,7 @@ library(ggplot2)
 library(pheatmap)
 library(RColorBrewer)
 #import norm. counts
-dna_cnts <- read_csv('dnadmg_deseq_norm_counts.csv')%>% column_to_rownames("...1")
+dna_cnts <- read_csv('dnadmg_deseq_norm_counts.csv') %>% column_to_rownames("...1")
 ahr_cnts <- read_csv('ahr_deseq_norm_counts.csv') %>% column_to_rownames("...1")
 car_cnts <- read_csv('carpxr_deseq_norm_counts.csv') %>% column_to_rownames("...1")
 
